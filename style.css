@@ -1,0 +1,36 @@
+/* Reset minimal */
+* {margin:0;padding:0;box-sizing:border-box;font-family: 'Inter', sans-serif;}
+
+body {background:#f5f6fa;color:#2f2f2f;line-height:1.5;}
+header {display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#1f1f2f;color:white;}
+header h1 {font-size:1.6rem;}
+header .llm-selector {display:flex;align-items:center;}
+header select {margin-left:0.5rem;padding:0.3rem;border-radius:6px;border:none;}
+
+main {display:flex;flex-direction:column;gap:2rem;padding:1rem;max-width:1200px;margin:auto;}
+section {background:white;padding:1.5rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+h2,h3 {margin-bottom:0.8rem;color:#1f1f2f;}
+
+.task-input-row {display:flex;gap:0.5rem;margin-bottom:1rem;}
+.task-input-row input {flex:1;padding:0.5rem;border-radius:8px;border:1px solid #ddd;}
+.task-input-row button {padding:0.5rem 1rem;background:#4b6cb7;color:white;border:none;border-radius:8px;cursor:pointer;transition:0.2s;}
+.task-input-row button:hover {background:#3a539b;}
+
+#tasksContainer {list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.task-item {padding:0.5rem 1rem;background:#f0f4ff;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;gap:0.5rem;}
+.comment-section {display:flex;flex-direction:column;gap:0.5rem;}
+.comment-input {display:flex;gap:0.5rem;}
+.comment-input input {flex:1;padding:0.3rem;border-radius:6px;border:1px solid #ccc;}
+.comment-input button {padding:0.3rem 0.6rem;background:#4b6cb7;color:white;border:none;border-radius:6px;cursor:pointer;}
+.buttons-row {display:flex;gap:0.5rem;margin-top:1rem;}
+.buttons-row button {padding:0.4rem 0.8rem;background:#e0e0e0;border:none;border-radius:6px;cursor:pointer;transition:0.2s;}
+.buttons-row button:hover {background:#d0d0d0;}
+.json-paste-section textarea {width:100%;height:100px;padding:0.5rem;border-radius:8px;border:1px solid #ccc;margin-top:0.5rem;}
+.prompts-section button {margin-right:0.5rem;padding:0.4rem 0.8rem;background:#4b6cb7;color:white;border:none;border-radius:6px;cursor:pointer;}
+.prompts-section button:hover {background:#3a539b;}
+.copied-msg {display:none;color:green;margin-top:0.5rem;}
+.module {margin-top:1rem;}
+.module-prompt {display:flex;gap:0.5rem;margin-top:0.5rem;}
+table {width:100%;border-collapse:collapse;}
+table th, table td {border:1px solid #ddd;padding:0.5rem;text-align:left;}
+textarea {resize:none;}
