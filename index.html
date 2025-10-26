@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outil Gestion Tâches & Modules</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tableau de Pilotage</h1>
+    <label for="llmSelect">Choisir LLM :</label>
+    <select id="llmSelect">
+      <option value="https://chat.openai.com/">ChatGPT</option>
+      <option value="https://www.perplexity.ai/">Perplexity</option>
+      <option value="https://www.anthropic.com/claude">Claude</option>
+      <option value="https://www.deepseek.ai/">Deepseek</option>
+      <option value="https://mistral.ai/">Mistral</option>
+    </select>
+  </header>
+
+  <section id="taskSection">
+    <h2>Input Tâches</h2>
+    <input type="text" id="taskInput" placeholder="Nouvelle tâche…">
+    <button id="addBtn">Ajouter tâche</button>
+    <button id="clearBtn">🧹 Tout nettoyer</button>
+    <button id="archiveBtn">📂 Archiver</button>
+    <button id="restoreBtn">📤 Uploader archive</button>
+    <input type="file" id="restoreInput" accept=".json" style="display:none;">
+    <ul id="tasksContainer"></ul>
+  </section>
+
+  <section id="promptSection">
+    <h2>JSON / Prompt</h2>
+    <textarea id="jsonPaste" placeholder="Colle ici le JSON retourné par le LLM…"></textarea>
+    <button id="sendToLLMBtn">Push au LLM</button>
+  </section>
+
+  <section id="modulesSection">
+    <h2>Modules / Actions</h2>
+
+    <div id="jalonsModule">
+      <h3>Jalons</h3>
+      <ul id="jalonsList"></ul>
+    </div>
+
+    <div id="messagesModule">
+      <h3>Mails / Messages</h3>
+      <table id="messagesTable">
+        <thead>
+          <tr><th>✔</th><th>Destinataire</th><th>Sujet</th><th>Texte</th><th>Note</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <select id="mailPromptSelect">
+        <option value="https://chat.openai.com/">ChatGPT</option>
+        <option value="https://www.perplexity.ai/">Perplexity</option>
+        <option value="https://www.anthropic.com/claude">Claude</option>
+      </select>
+      <button id="generateMailBtn">Envoyer au LLM</button>
+    </div>
+
+    <div id="livrablesModule">
+      <h3>Livrables</h3>
+      <ul id="livrablesList"></ul>
+      <select id="livrablePromptSelect">
+        <option value="https://chat.openai.com/">ChatGPT</option>
+        <option value="https://www.perplexity.ai/">Perplexity</option>
+        <option value="https://www.anthropic.com/claude">Claude</option>
+      </select>
+      <button id="generateLivrableBtn">Envoyer au LLM</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
